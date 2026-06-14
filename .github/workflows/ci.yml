@@ -19,4 +19,5 @@ jobs:
           go-version: "1.26.0"
 
       - name: Go tests for auth header 
-        run: go test ./...
+        run: go test -cover  ./...
+         
