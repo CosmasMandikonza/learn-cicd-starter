@@ -18,5 +18,5 @@ jobs:
         with:
           go-version: "1.26.0"
 
-      - name: Go versions
-        run: go version
+      - name: Go tests for auth header 
+        run: go test ./...
