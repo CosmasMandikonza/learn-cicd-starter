@@ -20,4 +20,7 @@ jobs:
 
       - name: Go tests for auth header 
         run: go test -cover  ./...
-         
+      
+      - name: style
+        run: test -z $(go fmt ./...)
+   
