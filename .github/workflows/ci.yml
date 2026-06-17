@@ -20,6 +20,12 @@ jobs:
 
       - name: Go tests for auth header
         run: go test -cover ./...
+      
+      - name: Install gosec
+        run: go install github.com/securego/gosec/v2/cmd/gosec@latest
+      
+      - name: check for security
+        run: gosec ./...
 
   style:
     name: Style
@@ -39,3 +45,5 @@ jobs:
       
       - name: Install staticcheck
         run: go install honnef.co/go/tools/cmd/staticcheck@latest
+
+      
